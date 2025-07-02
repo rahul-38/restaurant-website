@@ -63,8 +63,7 @@ const suggestionsBox = document.getElementById('searchSuggestions');
 searchInput.addEventListener('input', function () {
   const query = this.value.toLowerCase();
   const items = document.querySelectorAll('.product-card');
-  suggestionsBox.innerHTML = ''; // Clear previous suggestions
-
+  suggestionsBox.innerHTML = ''; 
   if (query.trim() === '') {
     suggestionsBox.style.display = 'none';
     return;
@@ -82,7 +81,7 @@ searchInput.addEventListener('input', function () {
       p.addEventListener('click', () => {
         item.scrollIntoView({ behavior: 'smooth', block: 'start' });
         suggestionsBox.style.display = 'none';
-        searchInput.value = ''; // Optional: Clear input after selecting
+        searchInput.value = '';
       });
       suggestionsBox.appendChild(p);
     }
@@ -108,7 +107,7 @@ let cartItems = [];
 updateCartUI();
 
 function addToCart(element,event) {
-  if(event) event.preventDefault(); // prevent link navigation jump
+  if(event) event.preventDefault();
 
   const productCard = element.closest(".product-card");
 
@@ -123,20 +122,16 @@ function addToCart(element,event) {
   if (!alreadyInCart) {
     cartItems.push(item);
     updateCartUI();
-
-    // Scroll smoothly to cart section or menu section (choose one)
-    // Example: scroll menu section into view
     const menuSection = document.getElementById('menu');
     
   }
 }
 
 function removeFromCart(id, event) {
-  if (event) event.preventDefault(); // prevent page jump
+  if (event) event.preventDefault();
   cartItems = cartItems.filter(item => item.id !== id);
   updateCartUI();
 
-  // Scroll cart into view after removing
   const cartBox = document.querySelector('.cart-box');
   if (cartBox) {
     cartBox.scrollIntoView({ behavior: 'smooth' });
@@ -145,17 +140,17 @@ function removeFromCart(id, event) {
 
 function updateCartUI() {
   const cartList = document.getElementById("cartList");
-  cartList.innerHTML = ""; // Clear existing items
+  cartList.innerHTML = "";
 
   const cartBox = document.querySelector('.cart-box');
   const count = document.querySelector('.shopping-cart-btn .count');
 
   if (cartItems.length === 0) {
-    cartBox.classList.remove('active'); // Hide cart if empty
+    cartBox.classList.remove('active');
     if (count) count.innerText = '0';
     return;
   } else {
-    cartBox.classList.add('active'); // Show cart if not empty
+    cartBox.classList.add('active');
   }
 
   cartItems.forEach(item => {
@@ -172,36 +167,35 @@ function updateCartUI() {
   </a>
 `;
 
-    // Append li to cart list
     cartList.appendChild(li);
 
-    // Scroll to product on clicking cart item (except remove button)
     li.querySelector('.cart-item').addEventListener('click', (e) => {
       e.preventDefault();
       if (e.target.classList.contains('remove-btn')) {
-        // Ignore clicks on remove button here
         return;
       }
       const productElement = document.getElementById(`product-${item.id}`);
       if (productElement) {
         productElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+      shoppingCart.classList.remove('active');
+    }, 50);
+  
       }
     });
 
-    // Remove item from cart when clicking remove button
     li.querySelector('.remove-btn').addEventListener('click', (e) => {
       e.preventDefault();
-      e.stopPropagation(); // Prevent the scroll on remove button click
+      e.stopPropagation();
       removeFromCart(item.id);
     });
   });
 
-  // Update cart count
+ 
   if (count) count.innerText = cartItems.length;
 }
 document.querySelectorAll('.cart-item').forEach(item => {
   item.addEventListener('click', function(event) {
-    // Avoid triggering when clicking the remove button inside
     if(event.target.classList.contains('remove-btn')) return;
 
     event.preventDefault();
@@ -213,8 +207,6 @@ document.querySelectorAll('.cart-item').forEach(item => {
   });
 });
 
-
-  // Add event listeners to remove buttons to prevent default and handle properly
   document.querySelectorAll('.remove-btn').forEach(btn => {
     btn.addEventListener('click', function(event) {
       event.preventDefault();
