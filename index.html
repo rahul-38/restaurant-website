@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodhub</title>
+
+  <link rel="stylesheet" href="./assets/css/foodhub.css">
+  <link rel="stylesheet" href="./assets/css/media_query.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Monoton&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+
+<div id="loader">
+  <img src="./assets/images/logo.svg" alt="Logo" id="loader-logo" />
+</div>
+
+
+  <div class="container">
+
+    <header>
+
+      <nav class="navbar">
+
+        <div class="navbar-wrapper">
+
+          <a href="#">
+            <img src="./assets/images/logo.svg" alt="logo" width="130">
+          </a>
+
+          <ul class="navbar-nav">
+
+            <li>
+              <a href="#home" class="nav-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#about" class="nav-link">About</a>
+            </li>
+
+            <li>
+              <a href="#services" class="nav-link">Services</a>
+            </li>
+
+            <li>
+              <a href="#menu" class="nav-link">Our Menu</a>
+            </li>
+
+            <li>
+              <a href="#testimonials" class="nav-link">Testimonials</a>
+            </li>
+
+            <li>
+              <a href="#contact" class="nav-link">Contact Us</a>
+            </li>
+
+          </ul>
+
+          <div class="navbar-btn-group">
+            
+            <button class="shopping-cart-btn">
+              <img src="./assets/images/cart.svg" alt="shopping cart icon" width="18">
+              <span class="count">0</span>
+            </button>
+
+            <button class="menu-toggle-btn">
+              <span class="line one"></span>
+              <span class="line two"></span>
+              <span class="line three"></span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+      <div class="cart-box">
+        <button class="cart-close-btn" onclick="closeCart()">
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        
+        <ul class="cart-box-ul" id="cartList">
+          <h4 class="cart-h4">Your order.</h4>
+        </ul>
+
+        <div class="cart-btn-group">
+          <button class="btn btn-secondary">View order</button>
+          <button class="btn btn-primary">Checkout</button>
+        </div>
+
+        <div class="cart-btn-group">
+          <button class="btn btn-secondary">View order</button>
+          <button class="btn btn-primary">Checkout</button>
+        </div>
+
+        <div class="cart-btn-group">
+          <button class="btn btn-secondary">View order</button>
+          <button class="btn btn-primary">Checkout</button>
+        </div>
+
+      </div>
+
+    </header>
+
+    <main>
+
+      <section class="home" id="home">
+
+        <div class="home-left">
+          <div class="search-container" >
+            <input type="text" id="menuSearch" placeholder="Search for a dish...">
+            <div id="searchSuggestions" class="suggestions-box"></div>
+        </div>
+
+          
+          <h1 class="main-heading">Food is the greatest blessing!</h1>
+
+          <p class="home-text">
+            अन्नं परमं भाग्यं, स्वास्थ्य का मूलाधार।
+          </p>
+
+          <div class="btn-group">
+
+            <button onclick="location.href='#menu'" class="btn btn-primary btn-icon">
+              <img src="./assets/images/menu.svg" alt="menu icon">
+              Our menu
+            </button>
+
+            <button onclick="location.href='#about'" class="btn btn-secondary btn-icon">
+              <img src="./assets/images/arrow.svg" alt="About us icon">
+              About us
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="home-right">
+
+          <img src="./assets/images/food1.png" alt="food image" class="food-img food-1" width="200" loading="lazy">
+          <img src="./assets/images/food2.png" alt="food image" class="food-img food-2" width="200" loading="lazy">
+          <img src="./assets/images/food3.png" alt="food image" class="food-img food-3" width="200" loading="lazy">
+
+        </div>
+
+      </section>
+
+      <section class="about" id="about">
+
+        <div class="about-left">
+
+          <div class="img-box">
+            <img src="./assets/images/about-image.jpg" alt="about image" class="about-img" width="250">
+          </div>
+
+          <div class="abs-content-box">
+            <div class="dotted-border">
+              <p class="number-lg">11</p>
+              <p class="text-md">Years Of <br> Experience</p>
+            </div>
+          </div>
+
+          <img src="./assets/images/circle.svg" alt="circle shape" class="shape shape-6" width="20">
+          <img src="./assets/images/circle.svg" alt="circle shape" class="shape shape-7" width="30">
+          <img src="./assets/images/ring.svg" alt="ring shape" class="shape shape-8" width="35">
+          <img src="./assets/images/ring.svg" alt="ring shape" class="shape shape-9" width="80">
+
+        </div>
+
+        <div class="about-right">
+
+          <h2 class="section-title">We are doing more than
+            you expect</h2>
+
+          <p class="section-text">
+              At our restaurant, every plate tells a story of passion, flavor, and community. Drawing inspiration from global cuisines while embracing local roots, we offer more than just a meal—we offer connection. Whether you're here for a quick bite or a celebration, our inviting space and thoughtful ambiance create the perfect setting. We blend modern elegance with a touch of warmth to ensure every visit feels special, comfortable, and absolutely memorable.          </p>
+
+          <p class="section-text">
+            With creativity, seasonal ingredients, and heartfelt service, we don’t just serve meals. we create experiences you’ll want to relive. </p>
+
+          <img src="./assets/images/signature.png" alt="signature" class="signature" width="150">
+
+        </div>
+
+      </section>
+
+      <section class="services" id="services">
+
+        <div class="service-card">
+
+          <p class="card-number">01</p>
+
+          <h3 class="card-heading">We are located in the city center</h3>
+
+          <p class="card-text">
+            Located in the vibrant city centre, our restaurant is easily accessible and perfect for any occasion.
+          </p>
+
+        </div>
+
+        <div class="service-card">
+
+          <p class="card-number">02</p>
+
+          <h3 class="card-heading">Fresh ingredients from organic farms</h3>
+
+          <p class="card-text">
+            We use only the freshest ingredients sourced directly from trusted organic farms to ensure natural flavor and quality
+          </p>
+
+        </div>
+
+        <div class="service-card">
+
+          <p class="card-number">03</p>
+
+          <h3 class="card-heading">Own fast delivery. 30 min Maximum</h3>
+
+          <p class="card-text">
+           Enjoy our delicious meals at home with our dedicated in-house delivery team—always within 30 minutes.
+          </p>
+
+        </div>
+
+        <div class="service-card">
+
+          <p class="card-number">04</p>
+
+          <h3 class="card-heading">Professional, experienced chefs</h3>
+
+          <p class="card-text">
+            Our head chef brings years of culinary expertise to every dish, ensuring a consistently exceptional dining experience.
+          </p>
+
+        </div>
+
+        <div class="service-card">
+
+          <p class="card-number">05</p>
+
+          <h3 class="card-heading">The highest standards of service</h3>
+
+          <p class="card-text">
+            From warm greetings to prompt service, we uphold the highest standards to make every visit memorable.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="product" id="menu">
+
+        <h2 class="section-title">Most popular dishes</h2>
+
+        <p class="section-text">
+          हमारा सबसे स्वादिष्ट भोजन
+        </p>
+
+    
+        <div class="products-grid">
+
+          <a href="#">
+
+            <div class="product-card" 
+                 id="product-1"
+                 data-id="1"
+                 data-name="Milk Shake"
+                 data-price="120"
+                 data-img="./assets/images/menu1.jpg">
+
+              <div class="img-box">
+                <img src="./assets/images/menu1.jpg" alt="product image" class="product-img" width="200" loading="lazy">
+                <div class="hover-overlay" onclick="addToCart(this,event)"><ion-icon name="add-circle-outline" class="big-icon"></ion-icon></div>
+              </div>
+
+              <div class="product-content">
+
+                <div class="wrapper">
+                  <h3 class="product-name">Milk Shake</h3>
+
+                  <p class="product-price">
+                    <span class="small">₹</span>120
+                  </p>
+                </div>
+
+                <p class="product-text">
+                  Vanilla, Thick
+                </p>
+
+                <div class="product-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+              </div>
+
+            </div>
+
+          </a>
+
+          <a href="#">
+
+            <div class="product-card" 
+                 id="product-2"
+                 data-id="2"
+                 data-name="Vegetable Chaat"
+                 data-price="369"
+                 data-img="./assets/images/menu2.jpg">
+
+              <div class="img-box">
+                <img src="./assets/images/menu2.jpg" alt="product image" class="product-img" width="200" loading="lazy">
+                <div class="hover-overlay" onclick="addToCart(this,event)"><ion-icon name="add-circle-outline" class="big-icon"></ion-icon></div>
+              </div>
+
+              <div class="product-content">
+
+                <div class="wrapper">
+                  <h3 class="product-name">Vegetable Chaat</h3>
+
+                  <p class="product-price">
+                    <span class="small">₹</span>369
+                  </p>
+                </div>
+
+                <p class="product-text">
+                  tomatoes, paneer, cheese, mushrooms, corn, shrimp.
+                </p>
+
+                <div class="product-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+              </div>
+
+            </div>
+
+          </a>
+
+          <a href="#">
+
+            <div class="product-card" 
+                 id="product-3"
+                 data-id="3"
+                 data-name="Special Vegan Dish"
+                 data-price="599"
+                 data-img="./assets/images/menu3.jpg">
+
+              <div class="img-box">
+                <img src="./assets/images/menu3.jpg" alt="product image" class="product-img" width="200" loading="lazy">
+                <div class="hover-overlay" onclick="addToCart(this,event)"><ion-icon name="add-circle-outline" class="big-icon"></ion-icon></div>
+
+                <div class="card-badge green">
+                  <ion-icon name="leaf"></ion-icon>
+                  <p>Vegan</p>
+                </div>
+              </div>
+
+              <div class="product-content">
+
+                <div class="wrapper">
+                  <h3 class="product-name">Special Vegan dish</h3>
+
+                  <p class="product-price">
+                    <span class="small">₹</span>599
+                  </p>
+                </div>
+
+                <p class="product-text">
+                  tomatoes, nori, feta cheese, mushrooms, rice noodles, corn, shrimp.
+                </p>
+
+                <div class="product-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+              </div>
+
+            </div>
+
+          </a>
+
+          <a href="#">
+
+            <div class="product-card" 
+                 id="product-4"
+                 data-id="4"
+                 data-name="Zinger Pro Burger"
+                 data-price="250"
+                 data-img="./assets/images/menu4.jpg">
+
+              <div class="img-box">
+                <img src="./assets/images/menu4.jpg" alt="product image" class="product-img" width="200" loading="lazy">
+                <div class="hover-overlay" onclick="addToCart(this,event)"><ion-icon name="add-circle-outline" class="big-icon"></ion-icon></div>
+
+                <div class="card-badge red">
+                  <ion-icon name="flame"></ion-icon>
+                  <p>Hot</p>
+                </div>
+              </div>
+
+              <div class="product-content">
+
+                <div class="wrapper">
+                  <h3 class="product-name">Zinger Pro Burger</h3>
+
+                  <p class="product-price">
+                    <span class="small">₹</span>250
+                  </p>
+                </div>
+
+                <p class="product-text">
+                  Premium burger with crunchy chicken, Mexican Habanero sauce, cheese, tomato & onion.
+                </p>
+
+                <div class="product-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+              </div>
+
+            </div>
+
+          </a>
+
+          <a href="#">
+
+            <div class="product-card" 
+                 id="product-5"
+                 data-id="5"
+                 data-name="Creamy Vegan Garlic Pasta"
+                 data-price="489"
+                 data-img="./assets/images/menu5.jpg">
+            
+
+              <div class="img-box">
+                <img src="./assets/images/menu5.jpg" alt="product image" class="product-img" width="200" loading="lazy">
+                <div class="hover-overlay" onclick="addToCart(this,event)"><ion-icon name="add-circle-outline" class="big-icon"></ion-icon></div>
+
+                <div class="card-badge green">
+                  <ion-icon name="leaf"></ion-icon>
+                  <p>Vegan</p>
+                </div>
+              </div>
+
+              <div class="product-content">
+
+                <div class="wrapper">
+                  <h3 class="product-name">Creamy Vegan Garlic Pasta</h3>
+
+                  <p class="product-price">
+                    <span class="small">₹</span>489
+                  </p>
+                </div>
+
+                <p class="product-text">
+                  Whole wheat pasta, nutritional yeast, grape tomatoes, vegan.
+                </p>
+
+                <div class="product-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+              </div>
+
+            </div>
+
+          </a>
+
+          <a href="#">
+
+            <div class="product-card" 
+                 id="product-6"
+                 data-id="6"
+                 data-name="Vegetable Chaat"
+                 data-price="369"
+                 data-img="./assets/images/menu2.jpg">
+
+              <div class="img-box">
+                <img src="./assets/images/menu2.jpg" alt="product image" class="product-img" width="200" loading="lazy">
+                <div class="hover-overlay" onclick="addToCart(this,event)"><ion-icon name="add-circle-outline" class="big-icon"></ion-icon></div>
+              </div>
+
+              <div class="product-content">
+
+                <div class="wrapper">
+                  <h3 class="product-name">Vegetable Chaat</h3>
+
+                  <p class="product-price">
+                    <span class="small">₹</span>369
+                  </p>
+                </div>
+
+                <p class="product-text">
+                  tomatoes, paneer. cheese, mushrooms, corn, shrimp.
+                </p>
+
+                <div class="product-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+        </section>
+        <div class="section-divider">
+            <hr>
+            <p>"Every bite tells a story. Every plate is a passion."<br>
+              हर निवाला एक कहानी कहता है!
+            </p>
+
+            <hr>
+            </div>
+
+      <section class="testimonials" id="testimonials">
+
+        <h2 class="section-title">What our customers say?</h2>
+
+        <p class="section-text">
+        हमारे ग्राहक क्या कहते हैं?
+        </p>
+        
+
+        <div class="testimonials-grid">
+
+          <div class="testimonials-card">
+
+            <h4 class="card-title">Tasty Foods</h4>
+
+            <div class="testimonials-rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+
+            <p class="testimonials-text">
+              Such a delightful experience! From the moment I walked in, I felt so welcomed. The food was absolutely divine, and the staff were incredibly kind and attentive. It felt like a warm, comforting escape. I’ve already recommended it to my friends—this place has quickly become my new favorite spot!
+            </p>
+
+            <div class="customer-info">
+              <div class="customer-img-box">
+                <img src="./assets/images/testimonials1.jpg" alt="customer image" class="customer-img" width="100" loading="lazy">
+              </div>
+
+              <h5 class="customer-name">Kirti Singh</h5>
+            </div>
+
+          </div>
+
+          <div class="testimonials-card">
+          
+            <h4 class="card-title">Perfect blend of flavor, ambiance, and service</h4>
+          
+            <div class="testimonials-rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+          
+            <p class="testimonials-text">
+              Absolutely loved the experience! The ambiance was cozy, the service was warm, and the food—just incredible. Every dish was bursting with flavor and beautifully presented. It's rare to find a place that gets everything right, but this restaurant truly delivers. A perfect spot for both casual meals and special occasions.
+            </p>
+          
+            <div class="customer-info">
+              <div class="customer-img-box">
+                <img src="./assets/images/testimonials2.jpg" alt="customer image" class="customer-img" width="100" loading="lazy">
+              </div>
+          
+              <h5 class="customer-name">Akshat Taneja</h5>
+            </div>
+          
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer>
+
+      <div class="footer-wrapper">
+
+        <a href="#">
+          <img src="./assets/images/logo-footer.svg" alt="logo" class="footer-brand" width="130">
+        </a>
+        <div class="footer-contact" id="contact">
+            <p>📍 Palam Vihar Market, Gurugram,
+              India 122017</p>
+            <p>📞 +91 98765 xxxxx</p>
+            <p>📧 contact@foodhub.in</p>
+        </div>
+
+        <div class="social-link">
+
+          <a href="https://x.com/rahul38_" target="_blank">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+
+          <a href="https://www.instagram.com/im_.perfectly_captured/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+
+          <a href="https://www.facebook.com/profile.php?id=100026364192924" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+
+          <a href="https://www.linkedin.com/in/rahul-rai-715b1919b/" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+
+        </div>
+
+        <p class="copyright">&copy; Copyright 2025 <a href="https://github.com/rahul-38/restaurant-website" target="_blank" rel="noopener noreferrer" class="custom-link">Rahul Rai</a>. All Rights Reserved.<br>
+        This website is a frontend-only restaurant UI built using HTML, CSS, and vanilla JS to showcase responsive web design and layout skills.</p>
+
+
+
+      </div>
+
+    </footer>
+
+  </div>
+
+  <script src="./assets/js/foodhub.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
