@@ -4,13 +4,13 @@ FoodHub is a fully responsive, frontend-only restaurant website UI built using *
 
 <br>
 
-## 🌐 Live Demo
+## Live Demo
 
-[Click here to see the live demo]([https://your-live-link.com](https://foodhub-rahul.vercel.app/))
+[Foodhub]([(https://foodhub-rahul.vercel.app/)])
 
 <br>
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **HTML5** – Semantic and structured layout
 - **CSS3** – Custom styling with variables, transitions, and animations
