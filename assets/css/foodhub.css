@@ -184,6 +184,7 @@ html {
 
 .suggestions-box {
   position: absolute;
+  width:300px;
   top: 100%;
   background: white;
   border: 1px solid #ccc;
